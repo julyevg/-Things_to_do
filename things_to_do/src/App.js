@@ -25,11 +25,13 @@ class App extends Component{
   }
   handleDelete(index)
   {
+    if( window.confirm('Are ypu sure you want to delete it ?')){
     this.setState({
       task: this.state.task.filter((e,i)=> {
         return i !== index
       })
     })
+  }
   }
   render(){
    
